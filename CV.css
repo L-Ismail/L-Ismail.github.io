@@ -1,0 +1,25 @@
+div#corps_principal{
+    border: 2px red solid;
+    max-height: max-content;
+
+}
+div#soleil{background-color: crimson;}
+div#image{
+    /* min-width: 200px; */
+max-width: 350px;}
+img{max-width: 350px;}
+div.corps_interne{display: flex;}
+div#boites{position: fixed;
+flex: 1;
+/* min-width: 200px; */
+max-width: 350px;
+max-height: min-content;
+border: 5px blue solid;}
+
+div#infos{
+    /* max-width: 500px; */
+flex: 2;
+margin-left: 450px;}
+#sun{max-width: 170px;
+    max-height: 80px;}
+/* div#resumé{max-height: 200px;} */
