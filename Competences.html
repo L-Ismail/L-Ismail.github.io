@@ -3,11 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Expérience Professionnelle</title>
+    <title>Compétences</title>
     <link rel="stylesheet" href="CV.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+    </script> 
 </head>
 <body>
+   <div class="corps_competences">
     <div class="border border-black border-3">
         <div class="col">
            <a href="CV.html"><img id="sun" src="101-1018752_black-and-white-sun-clipart-7-black-sun-symbol-1389205271.png" alt="img" ></a>
@@ -28,10 +32,16 @@
         </div>
       <!-- </div> -->
     </div>
+    
     <div class="container"> 
 
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui hic aperiam facere nam ratione accusantium! Commodi corporis qui id illum provident aspernatur excepturi, error vero fugiat, quibusdam perspiciatis! Eaque culpa praesentium nulla numquam exercitationem reprehenderit illo atque, ad molestias corporis eum veritatis quidem. Doloremque repellendus aut impedit molestiae voluptatem ut velit eveniet nam incidunt? Doloribus sequi laboriosam provident iusto iste nisi, dolor ipsa voluptatum a totam repudiandae in velit blanditiis dolores fugit tempora accusamus aliquam quam. Vitae, cum, id minus animi doloribus, quis numquam enim officia facilis vero qui consectetur saepe reprehenderit ad dolore libero nemo aliquid a nobis sequi exercitationem consequatur eos. Qui aut voluptate culpa sed quam praesentium sapiente ex dolores, quia laboriosam vero nobis. Repellat, dolorem mollitia? Quasi perspiciatis eum nihil expedita voluptatibus excepturi omnis fugit quisquam obcaecati dignissimos repudiandae et, quia beatae in aliquam tempora? Consectetur ratione corporis earum pariatur necessitatibus quod perspiciatis modi debitis facere natus, alias sunt nemo enim! Nesciunt placeat doloremque tenetur deleniti cum numquam amet, accusantium dicta, quo obcaecati voluptates laudantium! Explicabo corrupti quos animi voluptatem saepe nam libero, ullam vero eius totam quod exercitationem sapiente accusantium molestiae obcaecati sit. Ipsa eaque animi quae nisi perferendis eligendi error architecto voluptatibus, accusantium nihil?</p>
     </div>
+    <div class="constainer chart">
+        <canvas id="graph" style="width:100%;max-width:700px"></canvas> 
+    </div>
+  </div>
+    <script src="Competences.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

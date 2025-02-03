@@ -1,13 +1,51 @@
+.col-3{position: fixed;}
+.container.border-start.border-black.col4{margin-left: 350px;}
+
 div#corps_principal{
     border: 2px red solid;
     max-height: max-content;
-
+    /* background: linear-gradient(70deg, blue, pink); */
+    background: linear-gradient(
+        to bottom,
+        #a0d2eb,
+        #e5eaf5,
+        #d0bdf4,
+        #8458B3,
+        #a28089
+    )
 }
-div#soleil{background-color: crimson;
+.corps_competences{
+    max-height: max-content;
+    /* background: linear-gradient(70deg, blue, pink); */
+    background: linear-gradient(
+        to bottom,
+        #ff1d58,
+        #f75990,
+        #fff685,
+        #00DDFF,
+        #0049B7
+    )
+}
+/* div#soleil{background-color: crimson;
 display: grid;
 grid-column-end: auto;
 grid-template-columns: 400px 300px 200px 200px 200px;
+} */
+.border.border-black.border-3{
+display: grid;
+align-items: center;
+place-items: center;
+/* grid-row:auto; */
+grid-template-columns: max-content;
+grid-template-columns: 400px 300px 200px 200px 200px; ;
+flex-wrap: wrap;
 }
+/* 
+.row{justify-content: space-evenly; 
+    align-items: center; 
+    height: 100px; 
+    border: 1px solid black;
+    } */
 div#image{
     /* min-width: 200px; */
 max-width: 350px;}
@@ -26,10 +64,11 @@ max-width: 350px;
 max-height: min-content;
 border: 5px blue solid;}
 
-div#infos{
+/* div#infos{ */
     /* max-width: 500px; */
-flex: 2;
-margin-left: 450px;}
+/* flex: 2;
+margin-left: 450px; */
+/* } */
 #sun{max-width: 170px;
     max-height: 80px;}
 /* div#resumé{max-height: 200px;} */
@@ -38,9 +77,9 @@ margin-left: 450px;}
     background-color: #ff5722;
     color: #fff;
   }
-#soleil div{    
+/* #soleil div{    
 /* border: 3px white solid; */
-text-align: center;
+/* text-align: center;
 text-decoration: solid;
 text-decoration-color: ivory;
 font: bold;
@@ -48,6 +87,7 @@ font-size: large;
 font-style:normal;
 font-weight: bold;
 font-family: 'Roboto', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-color: whitesmoke;}
+color: whitesmoke;} */ */
 
 .onglet{border: 2px whitesmoke solid;}
+.container.text-center{ background-color: blue;}
