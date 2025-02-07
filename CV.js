@@ -1,3 +1,17 @@
+let a= document.createElement("div");
+let b= document.getElementsByTagName("col border-bottom border-danger");
+let c= document.createElement("div");
+// let d= document.createElement('img');
+// let b=document.getElementsByClassName("poisson");
+// b.append(a);
+// Create a class attribute:
+//b.createAttribute("class");
+//b.append(a);
+b[0].append(a)
+b[0].append(c);
+b[1].className= "infos";
+b[1].append(d);
+
 
 class Moi {
     nom = ""; // propriété nom
@@ -33,7 +47,7 @@ function afficherInfos() {
     var infos_perso = new Moi; 
     infos_perso={
         nom: "Ismaël Diallo",
-        age: "24 ans" ,
+        age: "23 ans" ,
         adresse: "28 Avenue du Giffre, Annemasse, Haute-Savoie, 74100",
         courriel: "28avenuearistide@gmail.com",
         telephone: "06 72 37 18 06",

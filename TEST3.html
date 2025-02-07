@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body, html {
+    height: 100%;
+    margin: 0;
+  }
+
+    #canvas-image-blending {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }</style>
+    
+</head>
+<body>
+    <canvas id="canvas-image-blending">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/granim/2.0.0/granim.js"></script>
+    <script>
+      var granimInstance = new Granim({
+    element: '#canvas-image-blending',
+    direction: 'top-bottom',
+    isPausedWhenNotInView: true,
+    image : {
+        source: 'granim.js-2.0.0/docs/assets/img/bg-forest.jpg',
+        blendingMode: 'multiply'
+    },
+    states : {
+        "default-state": {
+            gradients: [
+                ['#29323c', '#485563'],
+                ['#FF6B6B', '#556270'],
+                ['#80d3fe', '#7ea0c4'],
+                ['#f0ab51', '#eceba3']
+            ],
+            transitionSpeed: 7000
+        }
+    }
+});
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+body, html {
+    height: 100%;
+    margin: 0;
+  }
+        .section {
+    text-align: center;
+    font-size: 3em;
+}
+
+.fp-watermark {
+    display: none;
+}
+
+#section3 {
+    background-image: url('https://raw.githubusercontent.com/alvarotrigo/fullPage.js/master/examples/imgs/bg3.jpg');
+    min-height: 100%;
+}
+
+#section4 {
+    background-image: url("https://raw.githubusercontent.com/alvarotrigo/fullPage.js/master/examples/imgs/bg1.jpg");
+    min-height: 100%;
+}
+
+.section {
+    background-position: center center;
+    background-repeat: none;
+    background-size: cover;
+}
+    </style>
+</head>
+<body>
+    <div id="fullpage">
+        <div class="section">Some section</div>
+        <div class="section">
+            <div class="slide">Slide 1</div>
+            <div class="slide">Slide 2</div>
+            <div class="slide">Slide 3</div>
+        </div>
+        <div class="section" id="section3">Some section 3</div>
+        <div class="section" id="section4">Some section</div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.17/fullpage.min.js" integrity="sha512-zAHJKGyoPf2Y20Wi4uo32sa/vSvwKfY4tYUt6gJfmkA79X0wt5ZfaxL5GqJ5cMnmvGslWi5PKTo51rHRZqYbJg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        new fullpage('#fullpage', {
+  //options here
+  autoScrolling:true,
+  scrollHorizontally: true,
+  sectionsColor : ['#fe5f46', '#0998ec', '#fc6c7c', '#fec304'],
+  navigation: true,
+  slidesNavigation: true,
+  anchors:['firstPage', 'secondPage', 'thirdPage', 'finalPage'],
+  navigationTooltips: ['first', 'second']
+});
+    </script>
+</body>
+</html>
