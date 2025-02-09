@@ -1,0 +1,166 @@
+@import "compass/css3";
+
+/* Pour l'ensemble du projet, j'ai utilisé un seul et même fichier CSS; que j'annote */
+
+
+
+
+/* PARTIE CV.HTML */
+
+/* J'instaure une taille de 100% pour le corps html (body), afin qu'il puisse occuper toute la page */
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+/* La position "fixed" permet à la division contenant la boite infos de se mouvoir tout le long de la page et,
+je met aussi un margin left pour la division contenant le texte afin qu'elle ne mélange pas avec la boite infos */
+.col-3{position: fixed;}
+.container.border-start.border-black.col4{margin-left: 350px;}
+
+/* J'importe le framework CSS compass afin de réaliser la rotation de la roue solaire (identifiant sur CV.html: #sun), 
+dans animation, celle-ci avec spin,  a une roation infinie de 2s,  et avec @keyframes je peut mettre que cette rotation
+part de 0% à 0° puis à 100% à 360°, et que cette transformation se reproduit inifiniment grace à linear-inifinite */
+@import "compass/css3";
+
+#sun{max-width: 350px;
+  animation: spin 2s linear infinite;}
+  @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }  
+  
+  
+  
+  
+  /* La division contenant la roue solaire à une largeure max de 170 pixels et une hauteur max de 80 pixels */
+  #sun{max-width: 170px;
+      max-height: 80px;}
+  
+
+/* J'ai mis une bordure de 2 pixels rouges pour la division corps_principal (voir CV.html), puis j'ai mis "min-height :100%"
+pour quil puisse occuper toute la page et j'ai envin ajouter l'option linear-gradient à background afin qu'il puisse 
+un dégradé des 5 couleurs présentes vers le bas de la page */
+div#corps_principal{
+    
+
+    border: 2px red solid;
+    min-height: 100%;
+    
+     background: linear-gradient(
+        to bottom,
+        #d3dfe6,
+        #e5eaf5,
+        #d0bdf4,
+        #8458B3,
+        #a28089
+    ) 
+}
+
+.border.border-black.border-3{
+    display: grid;
+    align-items: center;
+    place-items: center;
+    /* grid-row:auto; */
+    grid-template-columns: max-content;
+    grid-template-columns: 400px 300px 200px 200px 200px; ;
+    flex-wrap: wrap;
+    z-index: 2;
+    }
+
+
+
+
+/* PARTIE EXPERIENCE PROFESSIONNELLE  */
+
+/* GRANIM */
+
+/* J'ai implémenté la bibliothèque JS Granim. Ici canvas-image-blending est l'identifiant de l'image de fond utilisée
+et il y a ses options ci-dessous comme sa taille, sa position absolue et le z-index qui la relègue derrière le texte */
+
+#canvas-image-blending {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1  }
+
+
+/* FRISE CHRONOLOGIQUE */
+/* J'ai pris une frise chronologique (https://codepen.io/t_afif/pen/MWOJqPx), que j'ai customisé pour mes besoins */
+/* ul et li sont les bases de la frises chronologiques,
+les réglages CSS sont les + ou - les mêmes que ceux de l'autre frise chronologiques (voir CV.css) */
+  ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 220px);
+  justify-content: center;
+  }
+  li {
+  grid-column: span 2;
+  text-align: center;
+  border-radius: 65px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 1.5em;
+  font-family: sans-serif;
+  position: relative;
+  padding: 20px;
+  border: 20px solid #0000;
+  background: linear-gradient(#e71e07 0 0) content-box,
+  linear-gradient(var(--c, #fcd000) 0 0) padding-box,
+  linear-gradient(var(--d, 90deg), #0000 75%, #42b132 0) border-box;
+  }
+  li:nth-child(even) {
+  grid-column-end: -1;
+  --d: -90deg;
+  --c: #009cda;
+  }
+  li:not(:last-child) {
+  margin-bottom: -20px;
+  }
+  li:before,
+  li:after {
+  content: "";
+  display: block;
+  height: 0.6em;
+  }
+  
+  time {
+  position: absolute;
+  font-size: 0.65em;
+  left: calc(100% + 50px);
+  top: 50%;
+  transform: translateY(-50%);
+  white-space: nowrap;
+  }
+  li:nth-child(even) time {
+  left: auto;
+  color: #000;
+  right: calc(100% + 50px);
+  }
+  time:before {
+  content: "";
+  /* position: absolute; */
+  height: 10px;
+  top: calc(50% - 5px);
+  right: calc(100% + 5px);
+  width: 65px;
+  background: repeating-linear-gradient(-90deg, #fcd000 0 5px, #0000 0 10px) 50%/100%
+  2px no-repeat;
+  }
+  li:nth-child(even) time:before {
+  right: auto;
+  left: calc(100% + 5px);
+  background: repeating-linear-gradient(90deg, #009cda 0 5px, #0000 0 10px) 50%/100%
+  2px no-repeat;
+  }
+
+  
+body {
+margin: 0;}

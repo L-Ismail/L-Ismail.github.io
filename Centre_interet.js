@@ -1,3 +1,9 @@
+// J'ai pris l'exemple basique donné par granim pour le fond d'écran, ici, la variable granimInstance est une instance 
+// de la classe Granim, qui lui permet d'utiliser les fonctionnalité de granim.js, on y règle les options comme la
+// direction du dégradé avec direction, permettant de balayer les couleurs de droite à gauche, ou bien de mettre en pause
+// le fond d'écran lorsqu'il n'est pas affiché. Et gradients permet de choisir les couleurs du dégradé ainsi que 
+// leur position dans le balayage
+
 var granimInstance = new Granim({
     element: '#canvas-basic',
     direction: 'left-right',

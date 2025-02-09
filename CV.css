@@ -1,19 +1,53 @@
-.col-3{position: fixed;}
-.container.border-start.border-black.col4{margin-left: 350px;}
 @import "compass/css3";
 
+/* Pour l'ensemble du projet, j'ai utilisé un seul et même fichier CSS; 
+excépté pour le fichier Expérience professionnelle, qui a son propre fichier CSS (Exp.css); que j'annote */
+
+
+
+
+/* PARTIE CV.HTML */
+
+/* J'instaure une taille de 100% pour le corps html (body), afin qu'il puisse occuper toute la page */
 body, html {
-    height: 100%;
-    margin: 0;
-  }
+  height: 100%;
+  margin: 0;
+}
 
+/* La position "fixed" permet à la division contenant la boite infos de se mouvoir tout le long de la page et,
+je met aussi un margin left pour la division contenant le texte afin qu'elle ne mélange pas avec la boite infos */
+.col-3{position: fixed;}
+.container.border-start.border-black.col4{margin-left: 350px;}
 
+/* J'importe le framework CSS compass afin de réaliser la rotation de la roue solaire (identifiant sur CV.html: #sun), 
+dans animation, celle-ci avec spin,  a une roation infinie de 2s,  et avec @keyframes je peut mettre que cette rotation
+part de 0% à 0° puis à 100% à 360°, et que cette transformation se reproduit inifiniment grace à linear-inifinite */
+@import "compass/css3";
+
+#sun{max-width: 350px;
+  animation: spin 2s linear infinite;}
+  @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }  
+  
+  
+  
+  
+  /* La division contenant la roue solaire à une largeure max de 170 pixels et une hauteur max de 80 pixels */
+  #sun{max-width: 170px;
+      max-height: 80px;}
+  
+
+/* J'ai mis une bordure de 2 pixels rouges pour la division corps_principal (voir CV.html), puis j'ai mis "min-height :100%"
+pour qu'il puisse occuper toute la page et j'ai envin ajouter l'option linear-gradient à background afin qu'il puisse 
+un dégradé des 5 couleurs présentes vers le bas de la page */
 div#corps_principal{
     
 
-
     border: 2px red solid;
     min-height: 100%;
+    min-width: 100%;
     
      background: linear-gradient(
         to bottom,
@@ -25,20 +59,245 @@ div#corps_principal{
     ) 
 }
 
-.section {
-  background-position: center center;
-  background-repeat: none;
-  background-size: cover;
-}
-.section {
-  text-align: center;
-}
+.border.border-black.border-3{
+  display: grid;
+  align-items: center;
+  place-items: center;
+  /* grid-row:auto; */
+  grid-template-columns: max-content;
+  grid-template-columns: 400px 300px 200px 200px 200px; ;
+  flex-wrap: wrap;
+  z-index: 2;
+  max-width: 100%;
+  min-width: 100%;
+  }
 
+
+
+/* PARTIE EXPERIENCE PROFESSIONNELLE  */
+
+/* VOIR Exp.css */
+
+
+
+
+
+
+/* PARTIE FORMATION */
+/* Pour la division corps_formation (voir Formation.html), j'ai mis "min-height :100%"
+pour qu'il puisse occuper toute la page et j'ai envin ajouter l'option linear-gradient à background afin qu'il puisse 
+un dégradé des 5 couleurs présentes vers le bas de la page. 
+"!important" est utile pour priviliégier la propriété "linear-gradient" */
+
+.corps_formation{ height: 610px;  
+  background: linear-gradient(
+      to bottom,
+      #feda6a,
+      #d4d4dc,
+      #393f4d,
+      #1d1e22
+  )!important}  
+
+
+ /* -->Fullpage.js, j'ai pris l'exemple basique proposé par leur soin: https://alvarotrigo.com/fullPage/examples/ */
+
+ /* watermark=filigrane de fullpage, je changerai de bibliothèque à l'avenir pour prendre une libre de droit */
 .fp-watermark {
   display: none;
 }
+
+/* section=propriété déjà présente de base. Ici, nous alignons le texte, rendons sa hauteur maximale à la page et 
+appliquons la propriété linear gradiant déjà vu. */
+.section {
+  text-align: center;
+  min-height: 100%;
+  background: linear-gradient(
+to bottom,
+#ff1d58,
+#f75990,
+#fff685,
+#00DDFF,
+#0049B7
+)}
+
+/* section3= correspond à la section d'identifiant "section3" de la page formation, à qui on applique une image de
+fond (ici de l'Université de Genève), et à qui ont maximise la taille, et priorise avec !important */
+#section3 {
+  background-image: url('https://www.unige.ch/sciences-societe/files/9616/6177/5685/Unimail-15.jpg');
+  background-size: 100% 100%;
+  min-height: 100%;
+  min-width: 100%!important
+}
+
+/* section4=même propriété que section3, on change juste l'image. */
+#section4 {
+  background-image: url("https://cdn.statically.io/img/live.staticflickr.com/65535/49695762306_92f698c989_b.jpg");
+  background-size: 100% 100%;
+  min-height: 100%;
+  min-width: 100%!important
+}
+
+/* Timeline , frise chronologique  utilisé dans la page Formation
+ et prise depuis ce site: https://codepen.io/abhikb/pen/wvJpmve et customisé pour mes besoins */
+/* Les titres H1 sont soulignés et ont une marge inférieur de 50px  */
+h1 {
+text-decoration: underline;
+margin-bottom: 50px;
+}
+
+/* La classe timeline issue d'un ul a une marge supérieur de 35 pixels et un padding de 15 pixels. Elle est aussi organisé
+en grille et cette grille a une disposition d'espace de 40% à gauche et le reste du contenu réparti automatiquement en 
+tableau; le tout centré */
+.timeline {
+margin-top: 35px;
+padding: 15px;
+display: grid;
+grid-template-columns: 40% auto;
+justify-content: center;
+}
+
+/* ul a plus ou moins les même compositions css que timeline, juste qu'elle a un affichage flex/en colonne */
+ul {
+margin-top: 30px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+list-style: none;
+padding: 0;
+}
+
+/* li a une marge supérieur de 30px, un padding de 25px et une position relative au sein de .timeline */
+li {
+margin-top: 30px;
+position: relative;
+padding: 25px;
+}
+
+/* li p a un padding supérieur de 0px, un padding droit de 20px et une transition de 1.5s */
+li p {
+padding: 0 20px;
+transition: 1.5s;
+}
+
+/* la classe date issue de span a une position absolue/non movible dans la div supérieur, une opacité de 0%, 
+une taille de police de 12px, un ancrage en haut de la div supérieur de 30px et à la gauche de -50px par rapport à la fin. */
+.date {
+position: absolute;
+top: 30px;
+left: -50px;
+opacity: 0;
+transition: 1.5s;
+font-size: 12px;
+}
+/* .timeline-line est une sous division de timeline, elle génère un fond gris, avec une position relative au sein de
+.timeline et d'autres aspects graphiques comme la largeur. */
+.timeline-line {
+background: rgb(228, 228, 228);
+width: 4px;
+border-radius: 12px;
+position: relative;
+justify-self: end;
+}
+/* .timeline-point est une classe issue d'un span générant les ronds par lesquels 
+passe la bar de progression (voir .timeline-innerline) */
+.timeline-point {
+border: none;
+position: absolute;
+
+border-radius: 50%;
+background: rgb(228, 228, 228);
+width: 8px;
+height: 8px;
+
+top: 30px;
+left: -6px;
+transition: 1.5s ease;
+}
+/* .timeline-innerline est une classe issue de span et représente la bar de progression bleue, 
+elle a un ancrage en haut à gauche de 0% et une transition linéaire 1s */
+.timeline-innerline {
+position: absolute;
+background: blue;
+width: 4px;
+height: 0%;
+
+top: 0%;
+left: 0%;
+
+transition: 1s linear;
+}
+
+/* @media screen and (min-width: 728px) permet la mise en horizontal de la frise chronologique  */
+
+ @media screen and (min-width: 728px) {
+.timeline {
+display: block;
+}
+ul {
+flex-direction: row;
+}
+li {
+margin-top: 0px;
+position: relative;
+width: 100%;
+padding: 0px;
+}
+li p {
+transform: translateY(-10px);
+opacity: 0;
+transition: 1.5s;
+}
+
+.date {
+opacity: 0;
+transition: 1.5s;
+font-size: 12px;
+
+position: absolute;
+top: -60px;
+left: 38%;
+}
+
+.timeline-point {
+width: 15px;
+height: 15px;
+
+top: -40px;
+left: 40%;
+transition: 1.5s ease;
+}
+
+.timeline-line {
+width: 100%;
+height: 4px;
+}
+
+.timeline-innerline {
+position: absolute;
+background: blue;
+width: 0%;
+height: 4px;
+
+top: 0%;
+left: 0%;
+
+transition: 1s linear;
+border-radius: 999px;
+}
+}
+
+
+
+/* PARTIE COMPETENCES */
+
+/* Pour la division corps_compétences (voir Compétences.html), j'ai mis "min-height :100%"
+pour qu'il puisse occuper toute la page et j'ai envin ajouter l'option linear-gradient à background afin qu'il puisse 
+un dégradé des 5 couleurs présentes vers le bas de la page. */
+
+
 .corps_competences{
-    min-height: 100%;    /* background: linear-gradient(70deg, blue, pink); */
+    min-height: 100%;
     background: linear-gradient(
         to bottom,
         #ff1d58,
@@ -49,17 +308,17 @@ div#corps_principal{
     )
 }
 
-.corps_ci{
-    min-height: 100%;  
-    /* background: linear-gradient(
-        to top,
-        #3d7c47,
-        #09868b,
-        #76c1d4,
-        #f7f7f7
-    ) */
-    z-index: 1000;
-}
+
+
+
+
+/* PARTIE CENTRE INTERETS */
+
+/* J'ai utilisé la bibliothèque Javascript Granim et pris un de leur exemple 
+proposé comme pour Fullpage.JS que j'ai customisé (https://sarcadass.github.io/granim.js/examples.html),
+ici #canvas-basic est l'identifiant du fond d'écran interactif, 
+qui aura une position absolue, une taille complète de 100% en longueur et en largeur, puis j'ai ajouté "z-index: -1" 
+pour être sûr que le fond ne cache pas le texte */
 
 #canvas-basic {
   position: absolute;
@@ -73,211 +332,7 @@ div#corps_principal{
   z-index: -1;
 }
 
-.corps_exp{
-    height: 100%;  
-    z-index: 1000;
-    /* background: linear-gradient(
-        to bottom,
-        #fbf579,
-        #005995,
-        #fa625f,
-        #600473
-    ) */
-}
 
 
-.fond{
-height: 100%;}
-.entête{z-index: 1000;}
-/* .triangle{z-index: -1;} */
-.triangle-background {
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 700px 700px 0 0;
-    border-color: #F9F9F9 transparent transparent transparent;
-    transition: border-width 0.5s;
-    z-index: -1;
-  }
-  
-  .triangle-background-weak {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 500px 500px 0 0;
-    border-color: #E8E8E8 transparent transparent transparent;
-    transition: border-width 0.5s;
-    z-index: -1;
-  }
-  
-  .triangle-background-strong {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 400px 400px 0 0;
-    border-color: #D45E99 transparent transparent transparent;
-    transition: border-width 0.5s;
-    z-index: -1;
-  }
-  
-  .wrap {
-    min-height: 100%;
-    position: relative;
-    z-index: -1;
-  }
-  .wrap:hover .triangle-background {
-    border-width: 700px 0 0 0;
-    z-index: -1;
-  }
-  .wrap:hover .triangle-background-weak {
-    border-width: 0 500px 0 0;
-    z-index: -1;
-  }
-  .wrap:hover .triangle-background-strong {
-    border-width: 400px 0 0 0;
-    z-index: -1;
-  }
-  .wrap:hover .github {
-    border-width: 0 100px 0 0;
-    z-index: -1;
-  }
-  .wrap:hover .footer {
-    border-width: 0 0 200px 200px;
-    z-index: -1;
-  }
-  
-  .github {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 100px 100px 0 0;
-    border-color: black transparent transparent transparent;
-    transition: border-width 0.5s;
-    z-index: -1;
-  }
-  
-  .footer {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 0 0 0 200px;
-    border-color: transparent transparent #333 transparent;
-    transition: border-width 0.5s;
-    z-index: -1;
-  }
-  
-  .footer-two {
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 0 0 0 400px;
-    border-color: transparent transparent black transparent;
-    transition: border-width 0.5s;
-    z-index: -1;
-  }
-.corps_formation{ height: 600px;  
-    background: linear-gradient(
-        to bottom,
-        /* #478559, 
-        /* #161748, */
-        /* #f95d9b, 
-        #39a0ca */
-        #feda6a,
-        #d4d4dc,
-        #393f4d,
-        #1d1e22
-    )}  
-/* div#soleil{background-color: crimson;
-display: grid;
-grid-column-end: auto;
-grid-template-columns: 400px 300px 200px 200px 200px;
-} */
-.border.border-black.border-3{
-display: grid;
-align-items: center;
-place-items: center;
-/* grid-row:auto; */
-grid-template-columns: max-content;
-grid-template-columns: 400px 300px 200px 200px 200px; ;
-flex-wrap: wrap;
-z-index: 2;
-}
-/* 
-.row{justify-content: space-evenly; 
-    align-items: center; 
-    height: 100px; 
-    border: 1px solid black;
-    } */
-div#image{
-    /* min-width: 200px; */
-max-width: 350px;}
-#sun{max-width: 350px;
-animation: spin 2s linear infinite;}
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }  
-#auguste{max-width: 350px;}
-div.corps_interne{display: flex;}
-div#boites{position: fixed;
-flex: 1;
-/* min-width: 200px; */
-max-width: 350px;
-max-height: min-content;
-border: 5px blue solid;}
 
-/* div#infos{ */
-    /* max-width: 500px; */
-/* flex: 2;
-margin-left: 450px; */
-/* } */
-#sun{max-width: 170px;
-    max-height: 80px;}
-/* div#resumé{max-height: 200px;} */
 
-.btn-primary{
-    background-color: #ff5722;
-    color: #fff;
-  }
-/* #soleil div{    
-/* border: 3px white solid; */
-/* text-align: center;
-text-decoration: solid;
-text-decoration-color: ivory;
-font: bold;
-font-size: large;
-font-style:normal;
-font-weight: bold;
-font-family: 'Roboto', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-color: whitesmoke;} */ */
-
-.onglet{border: 2px whitesmoke solid;}
-.container.text-center{ background-color: blue;}
-
-#canvas-image {
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-.img-thumbnail{height: 200px;
-width: 200px;}

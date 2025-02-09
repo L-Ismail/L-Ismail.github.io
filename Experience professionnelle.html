@@ -4,37 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Expérience Professionnelle</title>
-    <link rel="stylesheet" href="CV.css">
+    <link rel="stylesheet" href="Exp.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <style>#canvas-image-blending {
-      position: absolute;
-      display: block;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      z-index: -1;
-  }</style>
 </head>
 <body>
- 
+ <!-- Division contenant tous les éléments de la page -->
  <div class="corps_exp">
-  <canvas id="canvas-image-blending"></canvas>
+    <!-- J'ai utilisé la bibliothèque js Granim, la balise canvas est celle du fond d'écran dynamique -->
+  <canvas id="canvas-image-blending"></canvas> 
+          <!-- La Div du menu, la même que celle dans CV.html, ici, on rajoute un ancrage vers celle-ci dans l'image
+           de la roue solaire, cela s'appliquera pour les autres pages restantes (hors CV.html donc)-->
 
- 
-    <!-- <div class='wrap'> -->
-        <!-- <div class='triangle-background'></div> -->
-        <!-- <div class='triangle-background-weak'></div> -->
-        <!-- <div class='triangle-background-strong'></div> -->
               <div class="entête">
               <div class="border border-black border-3">
                   <div class="col">
-                     <a href="CV.html"><img id="sun" src="101-1018752_black-and-white-sun-clipart-7-black-sun-symbol-1389205271.png" alt="img" ></a>
-                      <!-- <h1> TEST</h1> -->
+                     <a href="CV.html"><img id="sun" src="Images/101-1018752_black-and-white-sun-clipart-7-black-sun-symbol-1389205271.png" alt="img" ></a>
                   </div>
-                <!-- <div class="row"> -->
                    <div class="col"> 
                       <a class="btn btn-outline-primary" href="Experience professionnelle.html" role="button">Expérience Professionnelle</a>
                    </div>
@@ -47,42 +32,24 @@
                   <div class="col">
                       <a class="btn btn-outline-primary" href="Centre_interet.html" role="button">Centre d'intêrets</a>
                   </div>
-                <!-- </div> -->
-              </div>
+              </div>          
+              <!-- frise chronologique prise depuis ce site: https://codepen.io/t_afif/pen/MWOJqPx -->
               <div class="container"> 
-          
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui hic aperiam facere nam ratione accusantium! Commodi corporis qui id illum provident aspernatur excepturi, error vero fugiat, quibusdam perspiciatis! Eaque culpa praesentium nulla numquam exercitationem reprehenderit illo atque, ad molestias corporis eum veritatis quidem. Doloremque repellendus aut impedit molestiae voluptatem ut velit eveniet nam incidunt? Doloribus sequi laboriosam provident iusto iste nisi, dolor ipsa voluptatum a totam repudiandae in velit blanditiis dolores fugit tempora accusamus aliquam quam. Vitae, cum, id minus animi doloribus, quis numquam enim officia facilis vero qui consectetur saepe reprehenderit ad dolore libero nemo aliquid a nobis sequi exercitationem consequatur eos. Qui aut voluptate culpa sed quam praesentium sapiente ex dolores, quia laboriosam vero nobis. Repellat, dolorem mollitia? Quasi perspiciatis eum nihil expedita voluptatibus excepturi omnis fugit quisquam obcaecati dignissimos repudiandae et, quia beatae in aliquam tempora? Consectetur ratione corporis earum pariatur necessitatibus quod perspiciatis modi debitis facere natus, alias sunt nemo enim! Nesciunt placeat doloremque tenetur deleniti cum numquam amet, accusantium dicta, quo obcaecati voluptates laudantium! Explicabo corrupti quos animi voluptatem saepe nam libero, ullam vero eius totam quod exercitationem sapiente accusantium molestiae obcaecati sit. Ipsa eaque animi quae nisi perferendis eligendi error architecto voluptatibus, accusantium nihil?</p>
+                <h1 class="display-4">Expériences Professionnelles</h1>
+                <ul class="timeline">
+                    <li class="A"><time datetime="1985-09">Juin-Aout 2019</time>Préci-Alp</li>
+                    <li class="A"><time datetime="1986-06">Juin-Aout 2022</time>Exploitation Agricole</li>
+                    <li class="A"><time datetime="1988-10">Mai-Aout 2023/2024</time>Préci-Alp</li>
+                </ul>
               </div>
-            </div>
-        <!-- <div class='github'></div> -->
-        <!-- <div class='footer-two'></div> -->
-        <!-- <div class='footer'></div> -->
+                  
     </div>
   </div>
- </div>  
+ </div> 
+ <!-- Les scripts utilisés, bootstraps, granim et Exp_pro.js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/granim/2.0.0/granim.min.js"></script>
-    <script>
-      var granimInstance = new Granim({
-    element: '#canvas-image-blending',
-    direction: 'top-bottom',
-    isPausedWhenNotInView: true,
-    image : {
-        source: 'granim.js-2.0.0/docs/assets/img/bg-forest.jpg',
-        blendingMode: 'multiply'
-    },
-    states : {
-        "default-state": {
-            gradients: [
-                ['#29323c', '#485563'],
-                ['#FF6B6B', '#556270'],
-                ['#80d3fe', '#7ea0c4'],
-                ['#f0ab51', '#eceba3']
-            ],
-            transitionSpeed: 7000
-        }
-    }
-});
+    <script src="Exp_pro.js">
     </script>
 </body>
 </html>

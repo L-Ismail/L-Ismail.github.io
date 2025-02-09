@@ -1,22 +1,11 @@
-let a= document.createElement("div");
-let b= document.getElementsByTagName("col border-bottom border-danger");
-let c= document.createElement("div");
-// let d= document.createElement('img');
-// let b=document.getElementsByClassName("poisson");
-// b.append(a);
-// Create a class attribute:
-//b.createAttribute("class");
-//b.append(a);
-b[0].append(a)
-b[0].append(c);
-b[1].className= "infos";
-b[1].append(d);
-
+// La classe Moi contient un constructeur qui me permettra d'entrer mes informations comme attributs, ces attributs, créer 
+// dans l'instance de la classe Moi infos_persos seront afficher avec la fonction afficherInfos() dans la division
+// d'identifiant: infos
 
 class Moi {
     nom = ""; // propriété nom
     age = ""; // propriété age, par défaut 0
-    adresse="";
+    adresse="";// propriété adresse etc.
     courriel=""
     telephone=""
     universite=""
@@ -37,7 +26,6 @@ function afficherInfos() {
     var html="<div class='nom'><h1>"+this.nom+"</span></h1>";
         html+="<div class='age'>"+this.age+"</div>";
         html+="<div class='adresse'>"+this.adresse+"</div>";
-        // html+="<div class='image'><img src='media/"+this.image+"' /></div>";
         html+="<div class='courriel'>"+this.courriel+"</div>";
         html+="<div class= 'telephone'> "+this.telephone+"</div>";
         html+="<div class= 'universite'> "+this.universite+"</div>";
