@@ -90,13 +90,18 @@ un dégradé des 5 couleurs présentes vers le bas de la page.
 "!important" est utile pour priviliégier la propriété "linear-gradient" */
 
 .corps_formation{ height: 610px;  
-  background: linear-gradient(
-      to bottom,
-      #feda6a,
-      #d4d4dc,
-      #393f4d,
-      #1d1e22
-  )!important}  
+  background: 
+  linear-gradient(
+  to top,
+  #815c94, 
+  #5a7692,
+  #2a9d8f, 
+  #98c1d9,
+  #eae2f0  
+)
+
+
+  !important}  
 
 
  /* -->Fullpage.js, j'ai pris l'exemple basique proposé par leur soin: https://alvarotrigo.com/fullPage/examples/ */
@@ -112,13 +117,22 @@ appliquons la propriété linear gradiant déjà vu. */
   text-align: center;
   min-height: 100%;
   background: linear-gradient(
+  to bottom,
+  #d8bfd8, 
+  #b197fc, 
+  #ffffff, 
+  #90caf9, 
+  #3f51b5 
+)
+
+  /* background: linear-gradient(
 to bottom,
 #ff1d58,
 #f75990,
 #fff685,
 #00DDFF,
-#0049B7
-)}
+#0049B7 */
+}
 
 /* section3= correspond à la section d'identifiant "section3" de la page formation, à qui on applique une image de
 fond (ici de l'Université de Genève), et à qui ont maximise la taille, et priorise avec !important */
@@ -307,7 +321,6 @@ un dégradé des 5 couleurs présentes vers le bas de la page. */
         #0049B7
     )
 }
-
 
 
 

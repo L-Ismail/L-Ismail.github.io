@@ -12,14 +12,45 @@ var granimInstance = new Granim({
         "default-state": {
             gradients: [
                 [
-                    { color: '#833ab4', pos: .2 },
-                    { color: '#fd1d1d', pos: .8 },
-                    { color: '#38ef7d', pos: 1 }
+                    { color: '#ffffff', pos: .2 }, // Blanc
+                    { color: '#a8dadc', pos: .8 }, // Bleu pastel
+                    { color: '#457b9d', pos: 1 }   // Bleu légèrement soutenu
                 ], [
-                    { color: '#40e0d0', pos: 0 },
-                    { color: '#ff8c00', pos: .2 },
-                    { color: '#ff0080', pos: .75 }
-                ],
+                    { color: '#f1faee', pos: 0 },  // Blanc cassé
+                    { color: '#cdeefb', pos: .2 }, // Bleu ciel très clair
+                    { color: '#1d3557', pos: .75 } // Bleu profond mais pas trop sombre
+                ]
+                
+
+                // [
+                //     { color: '#1b4332', pos: .2 }, // Vert forêt foncé
+                //     { color: '#0a3d62', pos: .8 }, // Bleu nuit
+                //     { color: '#206a5d', pos: 1 }   // Vert émeraude
+                // ], [
+                //     { color: '#003566', pos: 0 },  // Bleu profond
+                //     { color: '#0b525b', pos: .2 }, // Bleu canard foncé
+                //     { color: '#1e6091', pos: .75 } // Bleu acier
+                // ]
+                
+                // [
+                //     { color: '#2a9d8f', pos: .2 }, // Vert d'eau
+                //     { color: '#264653', pos: .8 }, // Bleu pétrole
+                //     { color: '#48cae4', pos: 1 }   // Bleu clair
+                // ], [
+                //     { color: '#0077b6', pos: 0 },  // Bleu océan
+                //     { color: '#00b4d8', pos: .2 }, // Bleu turquoise
+                //     { color: '#90e0ef', pos: .75 } // Bleu pastel
+                // ]
+                
+                // [
+                //     { color: '#833ab4', pos: .2 },
+                //     { color: '#fd1d1d', pos: .8 },
+                //     { color: '#38ef7d', pos: 1 }
+                // ], [
+                //     { color: '#40e0d0', pos: 0 },
+                //     { color: '#ff8c00', pos: .2 },
+                //     { color: '#ff0080', pos: .75 }
+                // ],
             ]
         }
     }
