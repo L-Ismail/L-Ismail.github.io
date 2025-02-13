@@ -13,28 +13,45 @@
   <!-- division contentant tous les éléments de la page (hormis la balise canvas) -->
    <div class="corps_ci">
     <!-- La Div du menu, la même que celle dans CV.html, ici, on rajoute un ancrage vers celle-ci dans l'image
-           de la roue solaire, cela s'appliquera pour les autres pages restantes (hors CV.html donc)-->
-    <div class="border border-black border-3">
-        <div class="col">
-           <a href="index.html"><img id="sun" src="Images/101-1018752_black-and-white-sun-clipart-7-black-sun-symbol-1389205271.png" alt="img" ></a>
-        
-        </div>
-     
-         <div class="col"> 
-            <a class="btn btn-outline-primary" href="Experience professionnelle.html" role="button">Expérience Professionnelle</a>
-         </div>
-        <div class="col">
-            <a class="btn btn-outline-primary" href="Formation.html" role="button">Formation</a>
-        </div>
-        <div class="col">
-            <a class="btn btn-outline-primary" href="Competences.html" role="button">Compétences</a>
-        </div>
-        <div class="col">
-            <a class="btn btn-outline-primary" href="Centre_interet.html" role="button">Centre d'intêrets</a>
-        </div>
-     
-    </div>
+           de la roue solaire, cela s'appliquera pour les autres pages restantes-->
+    
+        <nav class="navbar navbar-expand-lg border border-black border-2 ">
+            <a class="navbar-brand" href="index.html">                    
+                <img id="sun" src="Images/101-1018752_black-and-white-sun-clipart-7-black-sun-symbol-1389205271.png" alt="img" class="img-fluid">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav d-flex justify-content-end w-100">
+                <!-- Le bouton Experience Professionnelle qui renvoie à la page associé -->
+                <li class="nav-item">
+                    <a class="nav-link text-center" href="Experience professionnelle.html" >
+                    <h6>Experience professionnelle</h6>
+                    </a>  
+                </li>    
+                <li class="nav-item">
+                    <a class="nav-link text-center" href="Formation.html" >
+                        <h6>Formation</h6>
+                    </a>  
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-center" href="Competences.html" >
+                        <h6>Competences</h6>
+                    </a>  
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-center" href="Centre_interet.html" >
+                        <h6>Centre d'interêts</h6>
+                    </a>  
+                </li>
+              </ul>
+            </div>
+          </nav>    
     <div class="container"> 
+        <p class="text-center fs-1"> 
+            <span id="element"> Centre d'intérêts </span>
+          </p>
 
         <p>Je suis musicien amateur depuis plus de 10 ans (guitare, basse...), dessinateur-peintre; cinéphile (Stroheim, Lynch, Murnau) et passionné de littérature russe ainsi que d’histoire du monde antique (Cyrus le Grand, Qin Shi Huang, Sylla, Dioclétien, et plein d'autres civilisations).</p>
     </div>
@@ -48,7 +65,8 @@
         <div><img src="Images/Alexander_the_Great_mosaic_(cropped).jpg" alt="" class="img-thumbnail" style="height: 350px ; width: 300px;"></div>
         <div> <img src="Images/CamScanner 11-02-2025 03.09.jpg" alt="na" class="img-thumbnail" style="height: 350px ; width: 300px;" ></div>
     </div>
-    </div>  
+    </div>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>  
     <script src="https://cdnjs.cloudflare.com/ajax/libs/granim/2.0.0/granim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="Centre_interet.js"></script>

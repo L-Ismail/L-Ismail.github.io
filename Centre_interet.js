@@ -1,3 +1,18 @@
+// Partie typed.js
+// typed est une instance de la classe Typed, propre à la bibliothèque typed.js.
+// Dans cette instance de classe, on récupère l'élément associé à l'identifiant #element
+// dans la page html (ici le titre paragraphe), on applique les modalité de transformation dans string:
+// (apparition de la première lettre avec '<i>First</i> sentence.', puis de la suite avec '&amp; a second sentence.' ),
+// et on applique une rapidité de transition de l'apparition des lettre à 50.
+
+
+
+var typed = new Typed('#element', {
+    strings: ['Passions et Intérêts 催し物'],
+    typeSpeed: 50,
+  });
+
+
 // J'ai pris l'exemple basique donné par granim pour le fond d'écran, ici, la variable granimInstance est une instance 
 // de la classe Granim, qui lui permet d'utiliser les fonctionnalité de granim.js, on y règle les options comme la
 // direction du dégradé avec direction, permettant de balayer les couleurs de droite à gauche, ou bien de mettre en pause

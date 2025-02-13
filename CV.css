@@ -347,7 +347,19 @@ pour être sûr que le fond ne cache pas le texte */
   z-index: -1;
 }
 
+/* Afin de neutraliser tous les ul et li de la barre de navigation, j'ajoute "none" devant les propriétés */
 
+.navbar-nav .d-flex .justify-content-end .w-100{ list-style: none;
+  padding: 0;
+  margin: 0!important}
 
-
+.nav-item{text-decoration: none;
+  transform: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: none;
+  color: none;
+  background: none!important
+}
 

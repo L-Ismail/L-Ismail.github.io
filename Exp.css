@@ -164,3 +164,20 @@ les réglages CSS sont les + ou - les mêmes que ceux de l'autre frise chronolog
   
 body {
 margin: 0;}
+
+/* Afin de neutraliser tous les ul et li de la barre de navigation, j'ajoute "none" devant les propriétés,
+mais la navbar n'est toujours pas conforme, je réglerai ce problème ultérieurements */
+
+.navbar-nav .d-flex .justify-content-end .w-100{ list-style: none;
+  padding: 0;
+  margin: 0;}
+
+.nav-item{    text-decoration: none;
+  transform: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: none;
+  color: none;
+  background: none;
+}

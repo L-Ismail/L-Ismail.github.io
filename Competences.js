@@ -1,3 +1,20 @@
+// Partie typed.js
+// typed est une instance de la classe Typed, propre à la bibliothèque typed.js.
+// Dans cette instance de classe, on récupère l'élément associé à l'identifiant #element
+// dans la page html (ici le titre paragraphe), on applique les modalité du texte à faire apparaître dans string:
+// (Le mot que l'on souhaite voir apparaitre), et on applique une rapidité de transition de l'apparition des lettre à 50.
+
+
+
+var typed = new Typed('#element', {
+  strings: ['Compétences スキル'],
+  typeSpeed: 50,
+});
+
+
+
+
+
 // fullpage est une instance propre à fullpage.js, elle permet via autoscrolling  et scrollHorizontally de naviguer
 // dynamiquement et de centrer automatiquement sur les sections, elle rajoute des ancres comme "first page" 
 // afin de s'y retrouver.
@@ -80,4 +97,5 @@ new Chart("graph1", {
 }
 },
 );
+
 
