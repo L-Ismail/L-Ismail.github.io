@@ -56,7 +56,7 @@ div#corps_principal{
         #d0bdf4,
         #8458B3,
         #a28089
-    ) 
+    )!important 
 }
 
 .border.border-black.border-3{
@@ -72,7 +72,9 @@ div#corps_principal{
   min-width: 100%;
   }
 
-
+h6{color:MediumSeaGreen;
+font-size: medium;
+font-weight: bold;}
 
 /* PARTIE EXPERIENCE PROFESSIONNELLE  */
 

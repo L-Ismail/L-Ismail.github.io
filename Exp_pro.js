@@ -24,3 +24,17 @@ states : {
     }
 }
 });
+
+// Partie typed.js
+// typed est une instance de la classe Typed, propre à la bibliothèque typed.js.
+// Dans cette instance de classe, on récupère l'élément associé à l'identifiant #element
+// dans la page html (ici le titre paragraphe), on applique les modalité de transformation dans string:
+// (apparition de la première lettre avec '<i>First</i> sentence.', puis de la suite avec '&amp; a second sentence.' ),
+// et on applique une rapidité de transition de l'apparition des lettre à 50.
+
+
+
+var typed = new Typed('#element', {
+    strings: ['Expérience Professionnelle 実績'],
+    typeSpeed: 50,
+  });
