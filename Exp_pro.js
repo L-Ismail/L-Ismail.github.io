@@ -13,7 +13,7 @@ var typed = new Typed('#element', {
   });
 
 
-// Granim est une commandre propre à granim.js permettant de générer un élément graphique dynamique sujet au langage propre
+// Granim est une classe propre à granim.js permettant de générer un élément graphique dynamique sujet au langage propre
 // de cette bibliothèque. Ici, la balise dans le fichier html #canvas-image-blending permet d'y afficher l'image bg-forest,
 // d'y appliquer des options comme lighten pour éclaircir l'image, stretch pour l'étendre sur toute la page,on y applique
 //  aussi gradients, qui fera un dégradé dynamique des couleurs précisées avec transitionSpeed pour animer le tout 
